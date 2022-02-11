@@ -1,0 +1,21 @@
+package academy.devdojo.maratonajava.javacore.Gassociacao.test;
+
+import academy.devdojo.maratonajava.javacore.Gassociacao.dominio.Aluno;
+import academy.devdojo.maratonajava.javacore.Gassociacao.dominio.Local;
+import academy.devdojo.maratonajava.javacore.Gassociacao.dominio.Professor;
+import academy.devdojo.maratonajava.javacore.Gassociacao.dominio.Seminario;
+
+public class AssociacaoTeste {
+    public static void main(String[] args) {
+        Local local = new Local("Rua dez");
+        Aluno aluno = new Aluno("Luffy", 17);
+        Professor professor = new Professor("Girafales", "Espanhol");
+        Aluno[] alunosParaSeminario = {aluno};
+        Seminario seminario = new Seminario("Onde achar Chaves", alunosParaSeminario, local);
+        Seminario[] seminariosDisponiveis = {seminario};
+        professor.setSeminarios(seminariosDisponiveis);
+
+        professor.imprime();
+
+    }
+}
